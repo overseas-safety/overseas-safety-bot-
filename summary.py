@@ -2,6 +2,7 @@ import os
 import sqlite3
 import feedparser
 from atproto import Client, client_utils
+import tweepy
 import deepl
 from dotenv import load_dotenv
 
@@ -56,9 +57,30 @@ def main():
     # 投稿！
     try:
         post = client.send_post(summary_text)
-        print("Summary posted successfully!")
+        print("Summary posted successfully to Bluesky!")
     except Exception as e:
-        print(f"Failed to post summary: {e}")
+        print(f"Failed to post summary to Bluesky: {e}")
+
+    # Xへの投稿
+    api_key = os.getenv("X_API_KEY")
+    api_secret = os.getenv("X_API_SECRET")
+    access_token = os.getenv("X_ACCESS_TOKEN")
+    access_secret = os.getenv("X_ACCESS_TOKEN_SECRET")
+    
+    if all([api_key, api_secret, access_token, access_secret]):
+        try:
+            x_client = tweepy.Client(
+                consumer_key=api_key,
+                consumer_secret=api_secret,
+                access_token=access_token,
+                access_token_secret=access_secret
+            )
+            x_client.create_tweet(text=summary_text)
+            print("Summary posted successfully to X!")
+        except Exception as e:
+            print(f"Failed to post summary to X: {e}")
+    else:
+        print("X credentials missing in summary.py")
 
 if __name__ == "__main__":
     main()
