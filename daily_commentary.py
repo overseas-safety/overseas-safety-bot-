@@ -5,6 +5,7 @@ import tweepy
 import requests
 from google import genai
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
 
@@ -57,7 +58,12 @@ def main():
     
     # 300文字制限回避のためにリンクとタイトルを切り詰める
     short_title = title[:40] + "..." if len(title) > 40 else title
-    base_text = f"💡正午の深掘り解説\n「{short_title}」\n\n{commentary}\n\n詳細: {link}"
+    
+    # 実行時間（UTC）から日本時間の正午か夕方かを判定
+    now_utc_hour = datetime.utcnow().hour
+    time_prefix = "正午" if now_utc_hour < 6 else "夕方"
+    
+    base_text = f"💡{time_prefix}の深掘り解説\n「{short_title}」\n\n{commentary}\n\n詳細: {link}"
     
     # --- Blueskyへの投稿 ---
     handle = os.getenv("BLUESKY_HANDLE")

@@ -2,8 +2,8 @@ name: Daily AI Commentary
 
 on:
   schedule:
-    # Run every day at 12:00 JST (03:00 UTC)
-    - cron: '0 3 * * *'
+    # Run every day at 12:00 JST (03:00 UTC) and 18:00 JST (09:00 UTC)
+    - cron: '0 3,9 * * *'
   workflow_dispatch:
 
 jobs:
