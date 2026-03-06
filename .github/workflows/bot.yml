@@ -2,8 +2,8 @@ name: Overseas Safety Alert Bot
 
 on:
   schedule:
-    # Run every 4 hours. You can adjust the cron schedule.
-    - cron: '0 */4 * * *'
+    # Run every 30 minutes (Emergency Mode)
+    - cron: '*/30 * * * *'
   workflow_dispatch: # Allows manual trigger from the GitHub UI
 
 jobs:
