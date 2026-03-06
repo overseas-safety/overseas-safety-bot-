@@ -74,11 +74,15 @@ def post_to_bluesky(client, title, link, is_emergency, original_title):
     if is_emergency:
         text_builder.text(f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n")
         text_builder.link(link[:40]+"...", link)
-        text_builder.text("\n\n#国際情勢 #速報 #緊急アラート")
+        text_builder.text("\n\n📲 ")
+        text_builder.link("有事の最速通知はTelegramへ登録", "https://t.me/kaigai_anzen")
+        text_builder.text("\n#国際情勢 #速報 #緊急アラート")
     else:
         text_builder.text(f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n")
         text_builder.link(link[:40]+"...", link)
-        text_builder.text("\n\n#海外安全 #最新ニュース")
+        text_builder.text("\n\n📲 ")
+        text_builder.link("有事の最速通知はTelegramへ登録", "https://t.me/kaigai_anzen")
+        text_builder.text("\n#海外安全 #最新ニュース")
     
     try:
         post = client.send_post(text_builder)
@@ -127,9 +131,9 @@ def post_to_x(title, link, is_emergency, original_title):
         )
         
         if is_emergency:
-            tweet_text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n#国際情勢 #速報 #緊急アラート"
+            tweet_text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n📲 有事の最速通知はTelegramへ\nhttps://t.me/kaigai_anzen\n\n#国際情勢 #速報 #緊急アラート"
         else:
-            tweet_text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n#海外安全 #最新ニュース"
+            tweet_text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n📲 有事の最速通知はTelegramへ\nhttps://t.me/kaigai_anzen\n\n#海外安全 #最新ニュース"
             
         response = client.create_tweet(text=tweet_text)
         print("Successfully posted article to X.")
@@ -162,9 +166,9 @@ def post_to_telegram(title, link, is_emergency, original_title):
         
     try:
         if is_emergency:
-            text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n#国際情勢 #速報 #緊急アラート"
+            text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n🕊 平時のニュースはBlueskyで発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#国際情勢 #速報 #緊急アラート"
         else:
-            text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n#海外安全 #最新ニュース"
+            text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n🕊 平時のニュースはBlueskyで発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#海外安全 #最新ニュース"
             
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
         payload = {"chat_id": chat_id, "text": text}

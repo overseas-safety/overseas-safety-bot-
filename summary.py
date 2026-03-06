@@ -50,19 +50,26 @@ def main():
         j_title = translate_text(title)
         translated_lines.append(f"・{j_title}")
         
-    summary_text = "🌍【世界の主要ヘッドライン定時まとめ】\n\n" + "\n".join(translated_lines) + "\n\n#国際情勢まとめ #ニュース"
+    base_text = "🌍【世界の主要ヘッドライン定時まとめ】\n\n" + "\n".join(translated_lines)
+    
+    # Bluesky用の動的ビルダーを構成（Telegramへの相互送客リンク付き）
+    bluesky_builder = client_utils.TextBuilder()
+    bluesky_builder.text(base_text + "\n\n📲 ")
+    bluesky_builder.link("有事の最速通知はTelegramに登録を", "https://t.me/kaigai_anzen")
+    bluesky_builder.text("\n#国際情勢まとめ #ニュース")
     
     print("-" * 30)
-    print(summary_text)
+    print("Preparing summary posts...")
     
-    # 投稿！
+    # Blueskyへ投稿
     try:
-        post = client.send_post(summary_text)
+        post = client.send_post(bluesky_builder)
         print("Summary posted successfully to Bluesky!")
     except Exception as e:
         print(f"Failed to post summary to Bluesky: {e}")
 
-    # Xへの投稿
+    # Xへの投稿（Blueskyへの送客リンク付き）
+    x_text = base_text + "\n\n👇日々の平時ニュースはBlueskyでも発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#国際情勢まとめ #ニュース"
     api_key = os.getenv("X_API_KEY")
     api_secret = os.getenv("X_API_SECRET")
     access_token = os.getenv("X_ACCESS_TOKEN")
@@ -76,20 +83,21 @@ def main():
                 access_token=access_token,
                 access_token_secret=access_secret
             )
-            x_client.create_tweet(text=summary_text)
+            x_client.create_tweet(text=x_text)
             print("Summary posted successfully to X!")
         except Exception as e:
             print(f"Failed to post summary to X: {e}")
     else:
         print("X credentials missing in summary.py")
 
-    # Telegramへの投稿
+    # Telegramへの投稿（Blueskyへの送客リンク付き）
+    tg_text = base_text + "\n\n🕊 日々の平時ニュースはBlueskyでも発信中:\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#国際情勢まとめ #ニュース"
     tg_token = os.getenv("TELEGRAM_BOT_TOKEN")
     tg_chat_id = os.getenv("TELEGRAM_CHAT_ID")
     if all([tg_token, tg_chat_id]):
         try:
             url = f"https://api.telegram.org/bot{tg_token}/sendMessage"
-            payload = {"chat_id": tg_chat_id, "text": summary_text}
+            payload = {"chat_id": tg_chat_id, "text": tg_text}
             requests.post(url, json=payload)
             print("Summary posted successfully to Telegram!")
         except Exception as e:
