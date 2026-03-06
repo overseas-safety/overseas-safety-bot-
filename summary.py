@@ -2,8 +2,9 @@ import os
 import sqlite3
 import feedparser
 from atproto import Client, client_utils
-import tweepy
 import deepl
+import tweepy
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -81,6 +82,20 @@ def main():
             print(f"Failed to post summary to X: {e}")
     else:
         print("X credentials missing in summary.py")
+
+    # Telegramへの投稿
+    tg_token = os.getenv("TELEGRAM_BOT_TOKEN")
+    tg_chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    if all([tg_token, tg_chat_id]):
+        try:
+            url = f"https://api.telegram.org/bot{tg_token}/sendMessage"
+            payload = {"chat_id": tg_chat_id, "text": summary_text}
+            requests.post(url, json=payload)
+            print("Summary posted successfully to Telegram!")
+        except Exception as e:
+            print(f"Failed to post summary to Telegram: {e}")
+    else:
+        print("Telegram credentials missing in summary.py")
 
 if __name__ == "__main__":
     main()

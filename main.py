@@ -2,8 +2,9 @@ import os
 import sqlite3
 import feedparser
 from atproto import Client, client_utils, models
-import tweepy
 import deepl
+import tweepy
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -151,6 +152,47 @@ def post_to_x(title, link, is_emergency, original_title):
         print(f"Error posting to X: {e}")
         return False
 
+def post_to_telegram(title, link, is_emergency, original_title):
+    bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+    chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    
+    if not all([bot_token, chat_id]):
+        print("Telegram credentials missing. Skipping Telegram.")
+        return False
+        
+    try:
+        if is_emergency:
+            text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n#国際情勢 #速報 #緊急アラート"
+        else:
+            text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n#海外安全 #最新ニュース"
+            
+        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+        payload = {"chat_id": chat_id, "text": text}
+        response = requests.post(url, json=payload)
+        response.raise_for_status()
+        print("Successfully posted article to Telegram.")
+        
+        # 動的アフィリエイトリプライ
+        if is_emergency:
+            original_lower = original_title.lower()
+            if any(k in original_lower for k in POWER_KEYWORDS):
+                reply_text = "💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
+            else:
+                reply_text = "💡【有事の備え・通信ルート確保】\n現地での通信制限や情報統制に備え、日本の情報にアクセスできるVPNのご準備を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
+                
+            reply_payload = {
+                "chat_id": chat_id,
+                "text": reply_text,
+                "reply_to_message_id": response.json()["result"]["message_id"]
+            }
+            requests.post(url, json=reply_payload)
+            print("Successfully replied with affiliate link on Telegram.")
+            
+        return True
+    except Exception as e:
+        print(f"Error posting to Telegram: {e}")
+        return False
+
 def main():
     handle = os.getenv("BLUESKY_HANDLE")
     password = os.getenv("BLUESKY_PASSWORD")
@@ -199,6 +241,7 @@ def main():
         
         post_to_bluesky(client, translated, link, is_emg, orig_title)
         post_to_x(translated, link, is_emg, orig_title)
+        post_to_telegram(translated, link, is_emg, orig_title)
         
         mark_as_posted(link)
 
