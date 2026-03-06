@@ -35,6 +35,7 @@ EMERGENCY_KEYWORDS = [
 # 3. アフィリエイトリンクの振り分け用キーワード
 POWER_KEYWORDS = ["explosion", "strike", "disaster", "爆発", "空爆", "インフラ", "停電"]
 VPN_KEYWORDS = ["iran", "israel", "middle east", "russia", "china", "制限", "通信", "統制"]
+ECONOMY_KEYWORDS = ["economy", "sanction", "oil", "dollar", "election", "market", "制裁", "原油", "為替", "相場", "経済", "大統領選"]
 
 def init_db():
     conn = sqlite3.connect(DB_FILE)
@@ -93,8 +94,12 @@ def post_to_bluesky(client, title, link, is_emergency, original_title):
             original_lower = original_title.lower()
             reply_builder = client_utils.TextBuilder()
             
+            # 経済ショックが予測される場合 (DMM FX)
+            if any(k in original_lower for k in ECONOMY_KEYWORDS):
+                reply_builder.text("💡【有事の備え・為替変動リスク】\n中東情勢の緊迫化に伴い、原油価格や為替相場の急激な変動が予想されます。有事の相場に対応するため、即日取引可能なFX口座の事前開設を推奨しています:\n\n👉 ")
+                reply_builder.link("DMM FX（即日取引対応）の詳細", "https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9")
             # ポータブル電源が適している場合
-            if any(k in original_lower for k in POWER_KEYWORDS):
+            elif any(k in original_lower for k in POWER_KEYWORDS):
                 reply_builder.text("💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 ")
                 reply_builder.link("防災・有事対応ポータブル電源の詳細", "https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9")
             # デフォルトはVPN
@@ -143,7 +148,9 @@ def post_to_x(title, link, is_emergency, original_title):
             tweet_id = response.data['id']
             original_lower = original_title.lower()
             
-            if any(k in original_lower for k in POWER_KEYWORDS):
+            if any(k in original_lower for k in ECONOMY_KEYWORDS):
+                reply_text = "💡【有事の備え・為替変動リスク】\n中東情勢の緊迫化に伴い、原油価格や為替相場の急激な変動が予想されます。有事の相場に対応するため、即日取引可能なFX口座の事前開設を推奨しています:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9"
+            elif any(k in original_lower for k in POWER_KEYWORDS):
                 reply_text = "💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
             else:
                 reply_text = "💡【有事の備え・通信ルート確保】\n現地での通信制限や情報統制に備え、日本の情報にアクセスできるVPNのご準備を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
@@ -179,7 +186,9 @@ def post_to_telegram(title, link, is_emergency, original_title):
         # 動的アフィリエイトリプライ
         if is_emergency:
             original_lower = original_title.lower()
-            if any(k in original_lower for k in POWER_KEYWORDS):
+            if any(k in original_lower for k in ECONOMY_KEYWORDS):
+                reply_text = "💡【有事の備え・為替変動リスク】\n中東情勢の緊迫化に伴い、原油価格や為替相場の急激な変動が予想されます。有事の相場に対応するため、即日取引可能なFX口座の事前開設を推奨しています:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9"
+            elif any(k in original_lower for k in POWER_KEYWORDS):
                 reply_text = "💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
             else:
                 reply_text = "💡【有事の備え・通信ルート確保】\n現地での通信制限や情報統制に備え、日本の情報にアクセスできるVPNのご準備を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
