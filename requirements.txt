@@ -1,7 +1,7 @@
 feedparser==6.0.11
 requests==2.31.0
-atproto==0.0.46
+atproto==0.0.65
 deepl==1.17.0
 python-dotenv==1.0.1
 tweepy==4.14.0
-google-genai==0.3.0
+google-genai>=0.3.0
