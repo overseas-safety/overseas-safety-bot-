@@ -12,6 +12,9 @@ load_dotenv()
 # 主なニュースフィードから1つ選ぶ用
 FEED_URL = "http://feeds.bbci.co.uk/news/world/rss.xml"
 
+# GitHub Pagesブログのインデックスファイルパス
+BLOG_INDEX_FILE = "docs/index.md"
+
 def get_top_news():
     feed = feedparser.parse(FEED_URL)
     if feed.entries:
@@ -65,6 +68,29 @@ def main():
     
     base_text = f"💡{time_prefix}の深掘り解説\n「{short_title}」\n\n{commentary}\n\n詳細: {link}"
     
+    # --- ブログ（GitHub Pages）の自動更新（SEO施策） ---
+    try:
+        current_date_str = datetime.now().strftime("%Y年%m月%d日 %H:%M")
+        blog_entry = f"\n\n## {title}\n*作成日時: {current_date_str}*\n\n**【AI地政学・リスク解説】**\n> {commentary}\n\n[ニュースの一次ソース・詳細を読む]({link})\n"
+        
+        # 既存のブログファイルに最新の1件を一番上（ヘッダーの下）に追記していく
+        with open(BLOG_INDEX_FILE, "r") as f:
+            lines = f.readlines()
+        
+        insert_index = 0
+        for i, line in enumerate(lines):
+            if "### 最新のAI解説ニュース一覧" in line:
+                insert_index = i + 1
+                break
+                
+        if insert_index > 0:
+            lines.insert(insert_index, blog_entry)
+            with open(BLOG_INDEX_FILE, "w") as f:
+                f.writelines(lines)
+            print("Blog index updated successfully!")
+    except Exception as e:
+        print(f"Failed to update blog index: {e}")
+        
     # --- Blueskyへの投稿 ---
     handle = os.getenv("BLUESKY_HANDLE")
     password = os.getenv("BLUESKY_PASSWORD")
