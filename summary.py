@@ -9,11 +9,17 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# 主なニュースフィード
-FEEDS = [
-    "http://feeds.bbci.co.uk/news/world/rss.xml", # BBC
-    "https://www.aljazeera.com/xml/rss/all.xml", # Al Jazeera
-]
+# 巡回するRSSフィードのリスト
+FEEDS = {
+    "safety": [
+        "https://travel.state.gov/_res/rss/TAsTWs.xml", # 米国務省
+        "https://www.anzen.mofa.go.jp/info/anzen_rss.xml" # 日本外務省
+    ],
+    "news": [
+        "http://feeds.bbci.co.uk/news/world/rss.xml", # BBC World
+        "https://www.aljazeera.com/xml/rss/all.xml", # Al Jazeera
+    ]
+}
 
 def translate_text(text):
     auth_key = os.getenv("DEEPL_AUTH_KEY")
@@ -36,27 +42,30 @@ def main():
     client = Client()
     client.login(handle, password)
     
-    # BBCとAljazeeraから最新の見出しを3件ずつ抽出
+    # 安全情報とニュースから適度に抽出
     headlines = []
     
-    for url in FEEDS:
-        feed = feedparser.parse(url)
-        for entry in feed.entries[:3]: # 上位3件
-            headlines.append(entry.title)
+    for section, urls in FEEDS.items():
+        for url in urls:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:2]: # 各ソース上位2件ずつ
+                headlines.append(entry.title)
     
-    # 全部で6件のヘッドラインを日本語に翻訳
+    # 長すぎないように最大6件で絞って日本語に翻訳
     translated_lines = []
-    for i, title in enumerate(headlines[:5]): # 長すぎないように5件で絞る
+    for i, title in enumerate(headlines[:6]):
         j_title = translate_text(title)
         translated_lines.append(f"・{j_title}")
         
     base_text = "🌍【世界の主要ヘッドライン定時まとめ】\n\n" + "\n".join(translated_lines)
     
-    # Bluesky用の動的ビルダーを構成（Telegramへの相互送客リンク付き）
+    # Bluesky用の動的ビルダーを構成（自社商品＋Telegramリンク）
     bluesky_builder = client_utils.TextBuilder()
-    bluesky_builder.text(base_text + "\n\n📲 ")
-    bluesky_builder.link("有事の最速通知はTelegramに登録を", "https://t.me/kaigai_anzen")
-    bluesky_builder.text("\n#国際情勢まとめ #ニュース")
+    bluesky_builder.text(base_text + "\n\n🔒 ")
+    bluesky_builder.link("身の回りの防犯対策ガイドはこちら", "https://security-products.vercel.app/")
+    bluesky_builder.text("\n📲 ")
+    bluesky_builder.link("有事最速アラートはTelegram", "https://t.me/kaigai_anzen")
+    bluesky_builder.text("\n#世界情勢 #海外安全")
     
     print("-" * 30)
     print("Preparing summary posts...")
@@ -68,8 +77,8 @@ def main():
     except Exception as e:
         print(f"Failed to post summary to Bluesky: {e}")
 
-    # Xへの投稿（Blueskyへの送客リンク付き）
-    x_text = base_text + "\n\n👇日々の平時ニュースはBlueskyでも発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#国際情勢まとめ #ニュース"
+    # Xへの投稿（自社商品＋Bluesky送客）
+    x_text = base_text + "\n\n🔒 個人・ビジネス防犯対策ガイド\nhttps://security-products.vercel.app/\n\n👇日々の平時ニュースはBlueskyにて\nhttps://bsky.app/profile/overseassafetyjp.bsky.social"
     api_key = os.getenv("X_API_KEY")
     api_secret = os.getenv("X_API_SECRET")
     access_token = os.getenv("X_ACCESS_TOKEN")
@@ -90,8 +99,8 @@ def main():
     else:
         print("X credentials missing in summary.py")
 
-    # Telegramへの投稿（Blueskyへの送客リンク付き）
-    tg_text = base_text + "\n\n🕊 日々の平時ニュースはBlueskyでも発信中:\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#国際情勢まとめ #ニュース"
+    # Telegramへの投稿（自社商品＋Bluesky送客）
+    tg_text = base_text + "\n\n🔒 個人・ビジネス防犯対策ガイド\nhttps://security-products.vercel.app/\n\n🕊 平時ニュースはBlueskyにて:\nhttps://bsky.app/profile/overseassafetyjp.bsky.social"
     tg_token = os.getenv("TELEGRAM_BOT_TOKEN")
     tg_chat_id = os.getenv("TELEGRAM_CHAT_ID")
     if all([tg_token, tg_chat_id]):

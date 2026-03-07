@@ -71,7 +71,7 @@ def main():
     # --- ブログ（GitHub Pages）の自動更新（SEO施策） ---
     try:
         current_date_str = datetime.now().strftime("%Y年%m月%d日 %H:%M")
-        blog_entry = f"\n\n## {title}\n*作成日時: {current_date_str}*\n\n**【AI地政学・リスク解説】**\n> {commentary}\n\n[ニュースの一次ソース・詳細を読む]({link})\n"
+        blog_entry = f"\n\n## {title}\n*作成日時: {current_date_str}*\n\n**【専門アナリストの解説】**\n> {commentary}\n\n[ニュースの一次ソース・詳細を読む]({link})\n"
         
         # 既存のブログファイルに最新の1件を一番上（ヘッダーの下）に追記していく
         with open(BLOG_INDEX_FILE, "r") as f:
@@ -79,7 +79,7 @@ def main():
         
         insert_index = 0
         for i, line in enumerate(lines):
-            if "### 最新のAI解説ニュース一覧" in line:
+            if "### 最新の解説ニュース一覧" in line:
                 insert_index = i + 1
                 break
                 

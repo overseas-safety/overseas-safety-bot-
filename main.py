@@ -220,12 +220,18 @@ def main():
     
     new_alerts = []
     
-    # 1. 官公庁の安全情報（すべて取得）
+    # 1. 官公庁の安全情報は数が多いので「重大・緊急」のみ速報として扱う
     for url in FEEDS["safety"]:
         feed = feedparser.parse(url)
         for entry in feed.entries[:10]:
             if not is_posted(entry.link):
-                new_alerts.append({"title": entry.title, "link": entry.link, "is_emergency": False, "force_post": True})
+                title_lower = entry.title.lower()
+                is_emg = any(kw in title_lower for kw in EMERGENCY_KEYWORDS)
+                if is_emg:
+                    new_alerts.append({"title": entry.title, "link": entry.link, "is_emergency": True, "force_post": True})
+                else:
+                    # 緊急じゃない安全情報はDBに記録だけして個別速報はスキップ（まとめで扱う）
+                    mark_as_posted(entry.link)
                 
     # 2. ニュースサイト（緊急キーワードが含まれるものだけ取得＝Breakingのみ）
     for url in FEEDS["news"]:
