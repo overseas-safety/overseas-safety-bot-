@@ -18,6 +18,15 @@ layout: page
 
 
 ## Dozens killed as Israeli special forces raid Lebanese village in search of 40-year-old remains
+*作成日時: 2026年03月08日 09:54*
+
+**【専門アナリストの解説】**
+> イスラエル・レバノン間の過去の因縁が衝突を激化させ、地域情勢は極度に緊迫。レバノンへの渡航は極めて危険であり、周辺国でも予期せぬ事態への警戒が必要です。
+
+[ニュースの一次ソース・詳細を読む](https://www.bbc.com/news/articles/cy8l2p2l3v0o?at_medium=RSS&at_campaign=rss)
+
+
+## Dozens killed as Israeli special forces raid Lebanese village in search of 40-year-old remains
 *作成日時: 2026年03月08日 05:34*
 
 **【専門アナリストの解説】**
