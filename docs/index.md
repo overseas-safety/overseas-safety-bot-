@@ -15,3 +15,12 @@ layout: page
 ---
 
 ### 最新の解説ニュース一覧
+
+
+## Dozens killed as Israeli special forces raid Lebanese village in search of 40-year-old remains
+*作成日時: 2026年03月08日 05:34*
+
+**【専門アナリストの解説】**
+> イスラエル軍がレバノンで襲撃し、中東情勢は一段と緊迫化。過去の遺恨が再燃し、両国および周辺地域への渡航は極めて危険。
+
+[ニュースの一次ソース・詳細を読む](https://www.bbc.com/news/articles/cy8l2p2l3v0o?at_medium=RSS&at_campaign=rss)
