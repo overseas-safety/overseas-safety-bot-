@@ -46,15 +46,22 @@ def auto_engage():
                 if post.author.handle == handle:
                     continue
                     
-                print(f"Liking post from {post.author.handle}: {post.record.text[:30]}...")
-                client.like(post.uri, post.cid)
+                print(f"Engaging with {post.author.handle}: {post.record.text[:30]}...")
+                try:
+                    # いいねをつける
+                    client.like(post.uri, post.cid)
+                    # フォロバ狙いで積極的にフォローする（効果絶大）
+                    client.follow(post.author.did)
+                except Exception as inner_e:
+                    print(f"Could not follow/like {post.author.handle}: {inner_e}")
+                    
                 liked_count += 1
                 time.sleep(2) # 凍結防止のために間隔を空ける
                 
         except Exception as e:
             print(f"Error during engagement for keyword '{keyword}': {e}")
             
-    print(f"Auto engagement finished. Total liked: {liked_count}")
+    print(f"Auto engagement finished. Total engaged: {liked_count}")
 
 if __name__ == "__main__":
     auto_engage()

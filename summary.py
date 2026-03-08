@@ -21,6 +21,32 @@ FEEDS = {
     ]
 }
 
+def init_db():
+    conn = sqlite3.connect('alerts.db')
+    c = conn.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS posted_alerts
+                 (url TEXT PRIMARY KEY, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
+    conn.commit()
+    conn.close()
+
+def is_posted(url):
+    conn = sqlite3.connect('alerts.db')
+    c = conn.cursor()
+    c.execute('SELECT 1 FROM posted_alerts WHERE url = ?', (url,))
+    result = c.fetchone()
+    conn.close()
+    return bool(result)
+
+def mark_as_posted(url):
+    conn = sqlite3.connect('alerts.db')
+    c = conn.cursor()
+    try:
+        c.execute('INSERT INTO posted_alerts (url) VALUES (?)', (url,))
+        conn.commit()
+    except sqlite3.IntegrityError:
+        pass
+    conn.close()
+
 def translate_text(text):
     auth_key = os.getenv("DEEPL_AUTH_KEY")
     if not auth_key:
@@ -42,20 +68,35 @@ def main():
     client = Client()
     client.login(handle, password)
     
-    # 安全情報とニュースから適度に抽出
+    init_db()
+
+    # 安全情報とニュースから適度に抽出（既出チェック付き）
     headlines = []
     
     for section, urls in FEEDS.items():
         for url in urls:
             feed = feedparser.parse(url)
-            for entry in feed.entries[:2]: # 各ソース上位2件ずつ
-                headlines.append(entry.title)
+            # 新しい記事を探すため少し深めに検索
+            for entry in feed.entries[:10]: 
+                if not is_posted(entry.link):
+                    headlines.append({"title": entry.title, "link": entry.link})
+                    # 1ソースにつき新着2件までで十分
+                    if len([h for h in headlines if h["link"] == entry.link]) >= 2:
+                        break
     
-    # 長すぎないように最大6件で絞って日本語に翻訳
+    # 全体から長すぎないように最大5件で絞る
+    headlines = headlines[:5]
+    
+    if not headlines:
+        print("No new headlines to summarize. Skip posting.")
+        return
+
+    # 日本語に翻訳してDBに記録
     translated_lines = []
-    for i, title in enumerate(headlines[:6]):
-        j_title = translate_text(title)
+    for item in headlines:
+        j_title = translate_text(item["title"])
         translated_lines.append(f"・{j_title}")
+        mark_as_posted(item["link"])
         
     base_text = "🌍【世界の主要ヘッドライン定時まとめ】\n\n" + "\n".join(translated_lines)
     
