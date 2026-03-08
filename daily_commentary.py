@@ -33,7 +33,7 @@ def generate_commentary(title):
     # モデルの取得 (gemini-2.5-flashを使用)
     try:
         prompt = f"""
-以下の海外ニュースの見出しを元に、国際情勢や海外渡航への影響を地政学アナリストとして80文字以内で解説してください。見出し: {title}
+As a geopolitical analyst, provide a brief (under 140 characters in English) analysis of this news headline, focusing on its impact on global security or travel without any hashtags or greetings. Headline: {title}
 """
         response = client.models.generate_content(
             model='gemini-2.5-flash',
@@ -62,16 +62,16 @@ def main():
     # 300文字制限回避のためにリンクとタイトルを切り詰める
     short_title = title[:40] + "..." if len(title) > 40 else title
     
-    # 実行時間（UTC）から日本時間の正午か夕方かを判定
+    # 実行時間（UTC）から日本時間の正午か夕方かを判定 -> 今はグローバルなので単に時間帯名
     now_utc_hour = datetime.utcnow().hour
-    time_prefix = "正午" if now_utc_hour < 6 else "夕方"
+    time_prefix = "Midday" if now_utc_hour < 6 else "Evening"
     
-    base_text = f"💡{time_prefix}の深掘り解説\n「{short_title}」\n\n{commentary}\n\n詳細: {link}"
+    base_text = f"💡 {time_prefix} Deep Dive\n「{short_title}」\n\n{commentary}\n\nDetails: {link}"
     
     # --- ブログ（GitHub Pages）の自動更新（SEO施策） ---
     try:
-        current_date_str = datetime.now().strftime("%Y年%m月%d日 %H:%M")
-        blog_entry = f"\n\n## {title}\n*作成日時: {current_date_str}*\n\n**【専門アナリストの解説】**\n> {commentary}\n\n[ニュースの一次ソース・詳細を読む]({link})\n"
+        current_date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+        blog_entry = f"\n\n## {title}\n*Date: {current_date_str}*\n\n**[Expert Geopolitical Analysis]**\n> {commentary}\n\n[Read Primary Source]({link})\n"
         
         # 既存のブログファイルに最新の1件を一番上（ヘッダーの下）に追記していく
         with open(BLOG_INDEX_FILE, "r") as f:
@@ -79,7 +79,7 @@ def main():
         
         insert_index = 0
         for i, line in enumerate(lines):
-            if "### 最新の解説ニュース一覧" in line:
+            if "### Latest News & Analysis" in line:
                 insert_index = i + 1
                 break
                 
@@ -102,8 +102,8 @@ def main():
             bluesky_builder = client_utils.TextBuilder()
             # The text includes the base_text and adds the telegram link
             bluesky_builder.text(base_text + "\n\n📲 ")
-            bluesky_builder.link("有事速報はTelegramへ", "https://t.me/kaigai_anzen")
-            bluesky_builder.text("\n#地政学リスク #海外安全")
+            bluesky_builder.link("Fastest Breaking Alerts on Telegram", "https://t.me/kaigai_anzen")
+            bluesky_builder.text("\n#Geopolitics #TravelSafety")
             
             client.send_post(bluesky_builder)
             print("Commentary posted successfully to Bluesky!")
@@ -118,13 +118,8 @@ def main():
     
     if all([api_key, api_secret, access_token, access_secret]):
         try:
-            x_text = base_text + "\n\n👇日々の平時ニュースはBlueskyでも発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#地政学リスク #海外安全 #ニュース解説"
-            x_client = tweepy.Client(
-                consumer_key=api_key,
-                consumer_secret=api_secret,
-                access_token=access_token,
-                access_token_secret=access_secret
-            )
+            x_client = tweepy.Client(consumer_key=api_key, consumer_secret=api_secret, access_token=access_token, access_token_secret=access_secret)
+            x_text = base_text + "\n\n📲 Telegram:\nhttps://t.me/kaigai_anzen\n\n#Geopolitics"
             x_client.create_tweet(text=x_text)
             print("Commentary posted successfully to X!")
         except Exception as e:

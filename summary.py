@@ -54,7 +54,7 @@ def translate_text(text):
     try:
         translator = deepl.Translator(auth_key)
         # 短く要約するために少し意訳指示を足す（API側の仕様内）
-        return translator.translate_text(text, target_lang="JA").text
+        return translator.translate_text(text, target_lang="EN-US").text
     except:
         return text
 
@@ -95,18 +95,18 @@ def main():
     translated_lines = []
     for item in headlines:
         j_title = translate_text(item["title"])
-        translated_lines.append(f"・{j_title}")
+        translated_lines.append(f"• {j_title}")
         mark_as_posted(item["link"])
         
-    base_text = "🌍【世界の主要ヘッドライン定時まとめ】\n\n" + "\n".join(translated_lines)
+    base_text = "🌍 [Global Headlines Summary]\n\n" + "\n".join(translated_lines)
     
     # Bluesky用の動的ビルダーを構成（自社商品＋Telegramリンク）
     bluesky_builder = client_utils.TextBuilder()
     bluesky_builder.text(base_text + "\n\n🔒 ")
-    bluesky_builder.link("身の回りの防犯対策ガイドはこちら", "https://security-products.vercel.app/")
+    bluesky_builder.link("Personal & Business Security Guides", "https://security-products.vercel.app/")
     bluesky_builder.text("\n📲 ")
-    bluesky_builder.link("有事最速アラートはTelegram", "https://t.me/kaigai_anzen")
-    bluesky_builder.text("\n#世界情勢 #海外安全")
+    bluesky_builder.link("Get instant alerts on Telegram", "https://t.me/kaigai_anzen")
+    bluesky_builder.text("\n#Geopolitics #GlobalNews")
     
     print("-" * 30)
     print("Preparing summary posts...")
@@ -119,7 +119,7 @@ def main():
         print(f"Failed to post summary to Bluesky: {e}")
 
     # Xへの投稿（自社商品＋Bluesky送客）
-    x_text = base_text + "\n\n🔒 個人・ビジネス防犯対策ガイド\nhttps://security-products.vercel.app/\n\n👇日々の平時ニュースはBlueskyにて\nhttps://bsky.app/profile/overseassafetyjp.bsky.social"
+    x_text = base_text + "\n\n🔒 Personal & Business Security Guides\nhttps://security-products.vercel.app/\n\n👇 Follow us on Bluesky for regular updates\nhttps://bsky.app/profile/overseassafetyjp.bsky.social"
     api_key = os.getenv("X_API_KEY")
     api_secret = os.getenv("X_API_SECRET")
     access_token = os.getenv("X_ACCESS_TOKEN")
@@ -141,7 +141,7 @@ def main():
         print("X credentials missing in summary.py")
 
     # Telegramへの投稿（自社商品＋Bluesky送客）
-    tg_text = base_text + "\n\n🔒 個人・ビジネス防犯対策ガイド\nhttps://security-products.vercel.app/\n\n🕊 平時ニュースはBlueskyにて:\nhttps://bsky.app/profile/overseassafetyjp.bsky.social"
+    tg_text = base_text + "\n\n🔒 Personal & Business Security Guides\nhttps://security-products.vercel.app/\n\n🕊 Regular updates on Bluesky:\nhttps://bsky.app/profile/overseassafetyjp.bsky.social"
     tg_token = os.getenv("TELEGRAM_BOT_TOKEN")
     tg_chat_id = os.getenv("TELEGRAM_CHAT_ID")
     if all([tg_token, tg_chat_id]):

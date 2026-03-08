@@ -8,12 +8,12 @@ load_dotenv()
 # いいね（Like）をつける対象のターゲットキーワード
 # （このキーワードをつぶやいている人＝海外に行く人、リスク管理に関心がある人）
 TARGET_KEYWORDS = [
-    "海外出張",
-    "海外旅行",
-    "中東",
-    "治安 悪い",
-    "VPN",
-    "スリ 海外"
+    "travel safety",
+    "geopolitics",
+    "middle east",
+    "cybersecurity",
+    "vpn",
+    "pickpocket"
 ]
 
 def auto_engage():

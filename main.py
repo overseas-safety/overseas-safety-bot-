@@ -28,14 +28,14 @@ FEEDS = {
 # 2. 緊急検知キーワード（この単語があれば「発生」として扱う）
 EMERGENCY_KEYWORDS = [
     "iran", "israel", "middle east", "iraq", "lebanon", "syria", "palestine",
-    "breaking", "war", "attack", "missile", "strike", "explosion",
-    "武力衝突", "ミサイル", "空爆", "攻撃", "爆発", "退避", "緊急", "テロ", "渡航中止"
+    "breaking", "war", "attack", "missile", "strike", "explosion", "terrorism",
+    "terror", "evacuate", "evacuation", "emergency", "crisis", "threat", "alert"
 ]
 
 # 3. アフィリエイトリンクの振り分け用キーワード
-POWER_KEYWORDS = ["explosion", "strike", "disaster", "爆発", "空爆", "インフラ", "停電"]
-VPN_KEYWORDS = ["iran", "israel", "middle east", "russia", "china", "制限", "通信", "統制"]
-ECONOMY_KEYWORDS = ["economy", "sanction", "oil", "dollar", "election", "market", "制裁", "原油", "為替", "相場", "経済", "大統領選"]
+POWER_KEYWORDS = ["explosion", "strike", "disaster", "infrastructure", "blackout", "power outage"]
+VPN_KEYWORDS = ["iran", "israel", "middle east", "russia", "china", "restriction", "censorship", "blocked"]
+ECONOMY_KEYWORDS = ["economy", "sanction", "oil", "dollar", "election", "market", "currency", "inflation", "stock"]
 
 def init_db():
     conn = sqlite3.connect(DB_FILE)
@@ -65,7 +65,7 @@ def translate_text(text):
         return text
     try:
         translator = deepl.Translator(auth_key)
-        return translator.translate_text(text, target_lang="JA").text
+        return translator.translate_text(text, target_lang="EN-US").text
     except:
         return text
 
@@ -73,17 +73,17 @@ def post_to_bluesky(client, title, link, is_emergency, original_title):
     text_builder = client_utils.TextBuilder()
     
     if is_emergency:
-        text_builder.text(f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n")
+        text_builder.text(f"🔴【BREAKING: EMERGENCY ALERT】🔴\n{title}\n\n⚠️ Safety warning in effect. Please exercise extreme caution.\nDetails:\n")
         text_builder.link(link[:40]+"...", link)
         text_builder.text("\n\n📲 ")
-        text_builder.link("有事の最速通知はTelegramへ登録", "https://t.me/kaigai_anzen")
-        text_builder.text("\n#国際情勢 #速報 #緊急アラート")
+        text_builder.link("Fastest alerts on Telegram", "https://t.me/kaigai_anzen")
+        text_builder.text("\n#Breaking #Geopolitics #Alert")
     else:
-        text_builder.text(f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n")
+        text_builder.text(f"🚨【Global Safety & Travel Alert】\n{title}\n\nDetails:\n")
         text_builder.link(link[:40]+"...", link)
         text_builder.text("\n\n📲 ")
-        text_builder.link("有事の最速通知はTelegramへ登録", "https://t.me/kaigai_anzen")
-        text_builder.text("\n#海外安全 #最新ニュース")
+        text_builder.link("Join our Telegram channel", "https://t.me/kaigai_anzen")
+        text_builder.text("\n#TravelSafety #GlobalNews")
     
     try:
         post = client.send_post(text_builder)
@@ -96,16 +96,16 @@ def post_to_bluesky(client, title, link, is_emergency, original_title):
             
             # 経済ショックが予測される場合 (DMM FX)
             if any(k in original_lower for k in ECONOMY_KEYWORDS):
-                reply_builder.text("💡【有事の備え・為替変動リスク】\n中東情勢の緊迫化に伴い、原油価格や為替相場の急激な変動が予想されます。有事の相場に対応するため、即日取引可能なFX口座の事前開設を推奨しています:\n\n👉 ")
-                reply_builder.link("DMM FX（即日取引対応）の詳細", "https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9")
+                reply_builder.text("💡【Financial Risk Warning】\nHeightened geopolitical tension often triggers severe market & currency volatility. Ensure you are prepared to trade instantly with specialized FX accounts:\n\n👉 ")
+                reply_builder.link("Trading Account Info (JP)", "https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9")
             # ポータブル電源が適している場合
             elif any(k in original_lower for k in POWER_KEYWORDS):
-                reply_builder.text("💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 ")
-                reply_builder.link("防災・有事対応ポータブル電源の詳細", "https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9")
+                reply_builder.text("💡【Infrastructure Threat】\nIn light of potential power grid failures or destruction, securing a reliable portable power station is strongly recommended:\n\n👉 ")
+                reply_builder.link("Emergency Power Stations", "https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9")
             # デフォルトはVPN
             else:
-                reply_builder.text("💡【有事の備え・通信ルート確保】\n現地での通信制限や情報統制に備え、日本の情報にアクセスできるVPNのご準備を強く推奨します:\n\n👉 ")
-                reply_builder.link("スイカVPN（通信制限対策）の詳細", "https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX")
+                reply_builder.text("💡【Information & Comms Risk】\nCensorship and communication blockades frequently occur during crises. Secure a reliable VPN to maintain access to crucial information:\n\n👉 ")
+                reply_builder.link("Secure VPN connection", "https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX")
             
             root_ref = models.ComAtprotoRepoStrongRef.Main(cid=post.cid, uri=post.uri)
             reply_ref = models.AppBskyFeedPost.ReplyRef(parent=root_ref, root=root_ref)
@@ -136,9 +136,9 @@ def post_to_x(title, link, is_emergency, original_title):
         )
         
         if is_emergency:
-            tweet_text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n📲 有事の最速通知はTelegramへ\nhttps://t.me/kaigai_anzen\n\n#国際情勢 #速報 #緊急アラート"
+            tweet_text = f"🔴【BREAKING: EMERGENCY ALERT】🔴\n{title}\n\n⚠️ Safety warning in effect.\nDetails:\n{link}\n\n📲 Fastest alerts on Telegram\nhttps://t.me/kaigai_anzen\n\n#BreakingNews #Alert"
         else:
-            tweet_text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n📲 有事の最速通知はTelegramへ\nhttps://t.me/kaigai_anzen\n\n#海外安全 #最新ニュース"
+            tweet_text = f"🚨【Global Safety & Travel Alert】\n{title}\n\nDetails:\n{link}\n\n📲 Join Telegram for breaking news\nhttps://t.me/kaigai_anzen\n\n#TravelSafety"
             
         response = client.create_tweet(text=tweet_text)
         print("Successfully posted article to X.")
@@ -149,11 +149,11 @@ def post_to_x(title, link, is_emergency, original_title):
             original_lower = original_title.lower()
             
             if any(k in original_lower for k in ECONOMY_KEYWORDS):
-                reply_text = "💡【有事の備え・為替変動リスク】\n中東情勢の緊迫化に伴い、原油価格や為替相場の急激な変動が予想されます。有事の相場に対応するため、即日取引可能なFX口座の事前開設を推奨しています:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9"
+                reply_text = "💡【Financial Risk Warning】\nProtect your portfolio from sudden geopolitical shocks. Immediate access to trading is recommended:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9"
             elif any(k in original_lower for k in POWER_KEYWORDS):
-                reply_text = "💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
+                reply_text = "💡【Infrastructure Threat】\nSecure reliable emergency power before major failures hit:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
             else:
-                reply_text = "💡【有事の備え・通信ルート確保】\n現地での通信制限や情報統制に備え、日本の情報にアクセスできるVPNのご準備を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
+                reply_text = "💡【Information & Comms Risk】\nAvoid censorship blackouts. Secure your connection with a reliable VPN:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
                 
             client.create_tweet(text=reply_text, in_reply_to_tweet_id=tweet_id)
             print("Successfully replied with affiliate link on X.")
@@ -173,9 +173,9 @@ def post_to_telegram(title, link, is_emergency, original_title):
         
     try:
         if is_emergency:
-            text = f"🔴【発生：緊急速報】🔴\n{title}\n\n⚠️現地の状況・武力衝突等にご注意ください。\n詳細:\n{link}\n\n🕊 平時のニュースはBlueskyで発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#国際情勢 #速報 #緊急アラート"
+            text = f"🔴【BREAKING: EMERGENCY ALERT】🔴\n{title}\n\n⚠️ Safety warning in effect.\nDetails:\n{link}\n\n🕊 Follow us on Bluesky for regular updates\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#BreakingNews #Alert"
         else:
-            text = f"🚨【海外安全・渡航情報】\n{title}\n\n詳細:\n{link}\n\n🕊 平時のニュースはBlueskyで発信中\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#海外安全 #最新ニュース"
+            text = f"🚨【Global Safety & Travel Alert】\n{title}\n\nDetails:\n{link}\n\n🕊 Follow us on Bluesky for regular updates\nhttps://bsky.app/profile/overseassafetyjp.bsky.social\n\n#TravelSafety"
             
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
         payload = {"chat_id": chat_id, "text": text}
@@ -187,11 +187,11 @@ def post_to_telegram(title, link, is_emergency, original_title):
         if is_emergency:
             original_lower = original_title.lower()
             if any(k in original_lower for k in ECONOMY_KEYWORDS):
-                reply_text = "💡【有事の備え・為替変動リスク】\n中東情勢の緊迫化に伴い、原油価格や為替相場の急激な変動が予想されます。有事の相場に対応するため、即日取引可能なFX口座の事前開設を推奨しています:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9"
+                reply_text = "💡【Financial Risk Warning】\nProtect your portfolio from sudden geopolitical shocks. Immediate access to trading is recommended:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+FMMNG2+1WP2+6F9M9"
             elif any(k in original_lower for k in POWER_KEYWORDS):
-                reply_text = "💡【有事の備え・インフラ停止対策】\n現地のインフラ破壊や突発的な停電に備え、ポータブル電源の確保・確認を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
+                reply_text = "💡【Infrastructure Threat】\nSecure reliable emergency power before major failures hit:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA48+1BMP6A+4NJ4+63OY9"
             else:
-                reply_text = "💡【有事の備え・通信ルート確保】\n現地での通信制限や情報統制に備え、日本の情報にアクセスできるVPNのご準備を強く推奨します:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
+                reply_text = "💡【Information & Comms Risk】\nAvoid censorship blackouts. Secure your connection with a reliable VPN:\n\n👉 https://px.a8.net/svt/ejp?a8mat=4AZA47+G3ASDU+4R3G+631SX"
                 
             reply_payload = {
                 "chat_id": chat_id,
