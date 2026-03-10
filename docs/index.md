@@ -19,6 +19,15 @@ This platform automatically aggregates breaking news concerning global security,
 
 
 ## Who is Mojtaba Khamenei, Iran's new supreme leader?
+*Date: 2026-03-10 05:37*
+
+**[Expert Geopolitical Analysis]**
+> Mojtaba's leadership signals continuity of Iran's hardline stance, likely perpetuating regional tensions and challenging global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c78xxg05w0zo?at_medium=RSS&at_campaign=rss)
+
+
+## Who is Mojtaba Khamenei, Iran's new supreme leader?
 *Date: 2026-03-09 11:10*
 
 **[Expert Geopolitical Analysis]**
