@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Mixed messages from Trump leave more questions than answers over war's end
+*Date: 2026-03-10 11:07*
+
+**[Expert Geopolitical Analysis]**
+> Trump's war end ambiguity risks regional instability and undermines ally confidence in US foreign policy, potentially inviting exploitation by rivals.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c93j2dw72q9o?at_medium=RSS&at_campaign=rss)
+
+
 ## Who is Mojtaba Khamenei, Iran's new supreme leader?
 *Date: 2026-03-10 05:37*
 
