@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Steve Rosenberg: Russia seeks diplomatic and economic gains from Iran war
+*Date: 2026-03-11 11:06*
+
+**[Expert Geopolitical Analysis]**
+> Russia's pursuit of gains from an Iran war risks increased Mideast instability, encouraging conflict and exacerbating global security challenges.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c4gjyg0djvmo?at_medium=RSS&at_campaign=rss)
+
+
 ## 'I just want to be able to sleep': Attacks in Iran rock cities and cut power
 *Date: 2026-03-11 05:40*
 
