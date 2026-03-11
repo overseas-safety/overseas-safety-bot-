@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## 'I just want to be able to sleep': Attacks in Iran rock cities and cut power
+*Date: 2026-03-11 05:40*
+
+**[Expert Geopolitical Analysis]**
+> Iranian instability from internal attacks heightens regional security risks and could invite wider external involvement.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cev7llekwllo?at_medium=RSS&at_campaign=rss)
+
+
 ## Mixed messages from Trump leave more questions than answers over war's end
 *Date: 2026-03-10 11:07*
 
