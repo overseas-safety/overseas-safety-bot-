@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Oil price jumps despite deal to release record amount of reserves
+*Date: 2026-03-12 06:06*
+
+**[Expert Geopolitical Analysis]**
+> Oil surge despite reserve release indicates severe market stress, signaling persistent supply fears and heightened global economic and geopolitical instability.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c1w5141vx53o?at_medium=RSS&at_campaign=rss)
+
+
 ## Steve Rosenberg: Russia seeks diplomatic and economic gains from Iran war
 *Date: 2026-03-11 11:06*
 
