@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## China approves 'ethnic unity' law requiring minorities to learn Mandarin
+*Date: 2026-03-12 11:05*
+
+**[Expert Geopolitical Analysis]**
+> Beijing's 'ethnic unity' law, forcing Mandarin on minorities, escalates human rights concerns, risking internal instability and regional diplomatic tensions.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cp9meeek051o?at_medium=RSS&at_campaign=rss)
+
+
 ## Oil price jumps despite deal to release record amount of reserves
 *Date: 2026-03-12 06:06*
 
