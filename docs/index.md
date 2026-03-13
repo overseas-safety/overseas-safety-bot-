@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Four killed after US refuelling plane crashes in Iraq, military confirms
+*Date: 2026-03-13 11:00*
+
+**[Expert Geopolitical Analysis]**
+> US refuelling plane crash in Iraq highlights persistent risks of military operations in a volatile region. An accident, it won't escalate global security tensions.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cy0dz5ql17vo?at_medium=RSS&at_campaign=rss)
+
+
 ## Mission accomplished? The 2003 boast that haunts today's Iran conflict
 *Date: 2026-03-13 05:39*
 
