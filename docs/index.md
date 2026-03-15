@@ -19,6 +19,15 @@ This platform automatically aggregates breaking news concerning global security,
 
 
 ## BBC visits aftermath of Israeli strike on Lebanon that killed family as IDF targets Hezbollah
+*Date: 2026-03-15 10:00*
+
+**[Expert Geopolitical Analysis]**
+> Israeli strikes killing civilians in Lebanon escalate regional tensions. IDF targeting Hezbollah risks wider conflict, fueling instability.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c20lvn0ex6yo?at_medium=RSS&at_campaign=rss)
+
+
+## BBC visits aftermath of Israeli strike on Lebanon that killed family as IDF targets Hezbollah
 *Date: 2026-03-15 06:12*
 
 **[Expert Geopolitical Analysis]**
