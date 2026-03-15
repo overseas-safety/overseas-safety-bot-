@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## BBC visits aftermath of Israeli strike on Lebanon that killed family as IDF targets Hezbollah
+*Date: 2026-03-15 06:12*
+
+**[Expert Geopolitical Analysis]**
+> Civilian deaths from Israeli strikes in Lebanon targeting Hezbollah fuel regional escalation, heightening global security risks.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c20lvn0ex6yo?at_medium=RSS&at_campaign=rss)
+
+
 ## More US Marines and warships to be moved to Middle East, reports say
 *Date: 2026-03-14 09:58*
 
