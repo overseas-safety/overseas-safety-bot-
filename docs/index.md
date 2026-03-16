@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Iran taking steps to prevent anti-establishment protests, Tehran residents tell BBC
+*Date: 2026-03-16 11:36*
+
+**[Expert Geopolitical Analysis]**
+> Iran's internal crackdown signals escalating instability, potentially fueling regional tensions and impacting global security dynamics due to a more volatile regime.
+
+[Read Primary Source](https://www.bbc.com/news/articles/clygdwqw5dvo?at_medium=RSS&at_campaign=rss)
+
+
 ## BBC visits aftermath of Israeli strike on Lebanon that killed family as IDF targets Hezbollah
 *Date: 2026-03-15 10:00*
 
