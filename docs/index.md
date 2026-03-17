@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Trump's confidence is undimmed - but every Iran option comes with risk
+*Date: 2026-03-17 06:16*
+
+**[Expert Geopolitical Analysis]**
+> Trump's undimmed confidence despite Iran risks signals persistent pressure, increasing Mideast instability and global security concerns.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c70k29914q4o?at_medium=RSS&at_campaign=rss)
+
+
 ## Iran taking steps to prevent anti-establishment protests, Tehran residents tell BBC
 *Date: 2026-03-16 11:36*
 
