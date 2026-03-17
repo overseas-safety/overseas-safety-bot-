@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Trump seeks to delay meeting with Xi in China
+*Date: 2026-03-17 11:33*
+
+**[Expert Geopolitical Analysis]**
+> Delay signals continued US-China friction, prolonging trade war and delaying critical dialogue on global security and stability.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cn9e0z7v3nxo?at_medium=RSS&at_campaign=rss)
+
+
 ## Trump's confidence is undimmed - but every Iran option comes with risk
 *Date: 2026-03-17 06:16*
 
