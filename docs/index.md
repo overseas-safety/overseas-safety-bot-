@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Total repression and air strikes bring unrelenting dread for Iranians
+*Date: 2026-03-18 11:34*
+
+**[Expert Geopolitical Analysis]**
+> Iran's severe repression and air strikes risk escalating regional instability, potentially sparking broader conflict and humanitarian crises.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cn9e0wrglgdo?at_medium=RSS&at_campaign=rss)
+
+
 ## Top US counterterrorism official resigns over Iran war, urging Trump to 'reverse course'
 *Date: 2026-03-18 06:42*
 
