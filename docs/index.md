@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Top US counterterrorism official resigns over Iran war, urging Trump to 'reverse course'
+*Date: 2026-03-18 06:42*
+
+**[Expert Geopolitical Analysis]**
+> Resignation of top counterterrorism official over Iran war raises alarm bells for global security, signaling heightened risk of regional conflict.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cg4g66r3z40o?at_medium=RSS&at_campaign=rss)
+
+
 ## Trump seeks to delay meeting with Xi in China
 *Date: 2026-03-17 11:33*
 
