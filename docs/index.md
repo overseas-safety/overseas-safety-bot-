@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## How the Iran war has left Europe facing yet another energy crisis
+*Date: 2026-03-19 06:13*
+
+**[Expert Geopolitical Analysis]**
+> An Iran war-driven energy crisis in Europe signals acute global supply shocks, fueling economic instability and raising regional security risks worldwide.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c24de9e97vno?at_medium=RSS&at_campaign=rss)
+
+
 ## Total repression and air strikes bring unrelenting dread for Iranians
 *Date: 2026-03-18 11:34*
 
