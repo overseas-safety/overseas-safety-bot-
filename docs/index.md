@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## How Europe sleepwalked into yet another energy crisis
+*Date: 2026-03-19 11:09*
+
+**[Expert Geopolitical Analysis]**
+> Europe's persistent energy vulnerability empowers geopolitical rivals and strains global economic stability, posing security challenges worldwide.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c24de9e97vno?at_medium=RSS&at_campaign=rss)
+
+
 ## How the Iran war has left Europe facing yet another energy crisis
 *Date: 2026-03-19 06:13*
 
