@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Netanyahu says Israel 'acted alone' in attack on Iranian gas field
+*Date: 2026-03-20 06:07*
+
+**[Expert Geopolitical Analysis]**
+> Netanyahu's claim of a unilateral Israeli strike on an Iranian gas field dangerously escalates Mideast tensions, raising global security risks.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c2k3jgy9vq3o?at_medium=RSS&at_campaign=rss)
+
+
 ## How Europe sleepwalked into yet another energy crisis
 *Date: 2026-03-19 11:09*
 
