@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Russia, China and the US – the global winners and losers of the Iran war
+*Date: 2026-03-20 11:01*
+
+**[Expert Geopolitical Analysis]**
+> An Iran war would profoundly destabilize the Middle East, triggering a major global security realignment as superpowers compete for regional dominance.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c3wlwnn05zqo?at_medium=RSS&at_campaign=rss)
+
+
 ## Netanyahu says Israel 'acted alone' in attack on Iranian gas field
 *Date: 2026-03-20 06:07*
 
