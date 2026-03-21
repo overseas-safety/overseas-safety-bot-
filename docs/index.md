@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Iranian strikes on bases used by US caused $800m in damage, new analysis shows
+*Date: 2026-03-21 05:32*
+
+**[Expert Geopolitical Analysis]**
+> New data on $800M damage from Iranian strikes highlights enduring Mideast instability and the constant threat of escalation, impacting global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cddq7j48p35o?at_medium=RSS&at_campaign=rss)
+
+
 ## Russia, China and the US – the global winners and losers of the Iran war
 *Date: 2026-03-20 11:01*
 
