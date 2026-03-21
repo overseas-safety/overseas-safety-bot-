@@ -19,6 +19,15 @@ This platform automatically aggregates breaking news concerning global security,
 
 
 ## Iranian strikes on bases used by US caused $800m in damage, new analysis shows
+*Date: 2026-03-21 09:56*
+
+**[Expert Geopolitical Analysis]**
+> Iranian strikes' $800m damage highlights ongoing Mideast volatility, escalating regional tensions and posing a persistent challenge to global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cddq7j48p35o?at_medium=RSS&at_campaign=rss)
+
+
+## Iranian strikes on bases used by US caused $800m in damage, new analysis shows
 *Date: 2026-03-21 05:32*
 
 **[Expert Geopolitical Analysis]**
