@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Iranian strike hits near Israeli nuclear facility after Tehran says its site targeted
+*Date: 2026-03-22 06:07*
+
+**[Expert Geopolitical Analysis]**
+> Iranian strike near Israeli nuclear facility dangerously escalates Mideast tensions. Tit-for-tat attacks raise global security and nuclear incident risks.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c9qdvnv13qdo?at_medium=RSS&at_campaign=rss)
+
+
 ## Iranian strikes on bases used by US caused $800m in damage, new analysis shows
 *Date: 2026-03-21 09:56*
 
