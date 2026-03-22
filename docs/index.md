@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Iranian missiles injure 160 in towns near Israeli nuclear site
+*Date: 2026-03-22 09:58*
+
+**[Expert Geopolitical Analysis]**
+> Iranian missiles near Israeli nuclear site mark critical escalation, heightening Mideast instability and posing significant global security risks.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c9qdvnv13qdo?at_medium=RSS&at_campaign=rss)
+
+
 ## Iranian strike hits near Israeli nuclear facility after Tehran says its site targeted
 *Date: 2026-03-22 06:07*
 
