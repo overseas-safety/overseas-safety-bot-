@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Two pilots dead after plane and ground vehicle collide at New York's LaGuardia Airport
+*Date: 2026-03-23 11:33*
+
+**[Expert Geopolitical Analysis]**
+> LaGuardia collision disrupts major US travel. While an an accident, it prompts global scrutiny of ground safety protocols, potentially impacting international aviation standards.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cy01g522ww4o?at_medium=RSS&at_campaign=rss)
+
+
 ## Asia stocks slide as US and Iran threaten to escalate war
 *Date: 2026-03-23 06:53*
 
