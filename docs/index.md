@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Asia stocks slide as US and Iran threaten to escalate war
+*Date: 2026-03-23 06:53*
+
+**[Expert Geopolitical Analysis]**
+> Escalating US-Iran tensions in the Mideast risk broader regional conflict, disrupting energy supplies and international stability.
+
+[Read Primary Source](https://www.bbc.com/news/articles/czex56kwxxzo?at_medium=RSS&at_campaign=rss)
+
+
 ## Iranian missiles injure 160 in towns near Israeli nuclear site
 *Date: 2026-03-22 09:58*
 
