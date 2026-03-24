@@ -19,6 +19,15 @@ This platform automatically aggregates breaking news concerning global security,
 
 
 ## Ultimatums, diplomacy and a trip to Graceland as Trump eyes a deal with Iran
+*Date: 2026-03-24 11:34*
+
+**[Expert Geopolitical Analysis]**
+> Unconventional diplomacy, ultimatums, and a 'Graceland' visit signal volatile Iran deal talks, introducing high uncertainty for global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c895v5pq5p1o?at_medium=RSS&at_campaign=rss)
+
+
+## Ultimatums, diplomacy and a trip to Graceland as Trump eyes a deal with Iran
 *Date: 2026-03-24 06:17*
 
 **[Expert Geopolitical Analysis]**
