@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Ultimatums, diplomacy and a trip to Graceland as Trump eyes a deal with Iran
+*Date: 2026-03-24 06:17*
+
+**[Expert Geopolitical Analysis]**
+> Trump's ultimatums-diplomacy approach to Iran signals high volatility but also potential for a transformative deal impacting global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c895v5pq5p1o?at_medium=RSS&at_campaign=rss)
+
+
 ## Two pilots dead after plane and ground vehicle collide at New York's LaGuardia Airport
 *Date: 2026-03-23 11:33*
 
