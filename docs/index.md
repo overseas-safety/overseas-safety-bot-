@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## 'He liked the fear in our eyes,' Epstein survivors tell BBC
+*Date: 2026-03-25 11:28*
+
+**[Expert Geopolitical Analysis]**
+> Survivors' accounts underscore the pervasive nature of elite-level exploitation, posing a significant global security threat by undermining justice and trust in leadership.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cy81n9wexx6o?at_medium=RSS&at_campaign=rss)
+
+
 ## Oil at $150 would trigger global recession, says boss of financial giant BlackRock
 *Date: 2026-03-25 06:17*
 
