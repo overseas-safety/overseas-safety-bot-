@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Oil at $150 would trigger global recession, says boss of financial giant BlackRock
+*Date: 2026-03-25 06:17*
+
+**[Expert Geopolitical Analysis]**
+> Recession from $150 oil portends widespread instability, potential resource conflicts, and severe disruptions to global travel and trade.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c9wqrdkx8ppo?at_medium=RSS&at_campaign=rss)
+
+
 ## Ultimatums, diplomacy and a trip to Graceland as Trump eyes a deal with Iran
 *Date: 2026-03-24 11:34*
 
