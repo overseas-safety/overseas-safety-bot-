@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Meta and YouTube found liable in landmark social media addiction trial
+*Date: 2026-03-26 06:49*
+
+**[Expert Geopolitical Analysis]**
+> Landmark liability for social media addiction may spur global regulatory action, impacting information warfare, radicalization vulnerabilities, and national stability.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c747x7gz249o?at_medium=RSS&at_campaign=rss)
+
+
 ## 'He liked the fear in our eyes,' Epstein survivors tell BBC
 *Date: 2026-03-25 11:28*
 
