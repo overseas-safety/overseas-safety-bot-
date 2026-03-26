@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Are the US and Iran holding peace talks, and what do both sides want?
+*Date: 2026-03-26 11:38*
+
+**[Expert Geopolitical Analysis]**
+> Potential US-Iran talks face steep demands from both sides, signaling a long, complex path to de-escalation, maintaining regional security uncertainty.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cm29l9r68j8o?at_medium=RSS&at_campaign=rss)
+
+
 ## Meta and YouTube found liable in landmark social media addiction trial
 *Date: 2026-03-26 06:49*
 
