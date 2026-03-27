@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Rationing power and diluting petrol - how African countries are coping with effects of Iran war
+*Date: 2026-03-27 06:49*
+
+**[Expert Geopolitical Analysis]**
+> African energy crisis from Iran war fuels instability, risking wider social unrest & migration pressures globally.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cq8wkq1n9epo?at_medium=RSS&at_campaign=rss)
+
+
 ## Are the US and Iran holding peace talks, and what do both sides want?
 *Date: 2026-03-26 11:38*
 
