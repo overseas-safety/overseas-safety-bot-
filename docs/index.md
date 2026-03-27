@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## 'My daughter is under the rubble': Inside Tehran as civilian toll of strikes rises
+*Date: 2026-03-27 11:30*
+
+**[Expert Geopolitical Analysis]**
+> Strikes on Tehran's civilians signal dangerous escalation, heightening global security risks and likely prompting severe travel advisories for Iran and the wider Mideast.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cn0w1qxzd4xo?at_medium=RSS&at_campaign=rss)
+
+
 ## Rationing power and diluting petrol - how African countries are coping with effects of Iran war
 *Date: 2026-03-27 06:49*
 
