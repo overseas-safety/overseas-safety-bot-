@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Nepal's ex-PM arrested over fatal protest crackdown
+*Date: 2026-03-28 06:12*
+
+**[Expert Geopolitical Analysis]**
+> Nepal's ex-PM arrest over protest deaths highlights internal fragility, potentially spurring further unrest & setting a human rights accountability precedent.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cn89ry7y835o?at_medium=RSS&at_campaign=rss)
+
+
 ## 'My daughter is under the rubble': Inside Tehran as civilian toll of strikes rises
 *Date: 2026-03-27 11:30*
 
