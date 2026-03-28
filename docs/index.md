@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Iran war splits older and younger conservatives - as pressure builds for Trump to find exit ramp
+*Date: 2026-03-28 10:04*
+
+**[Expert Geopolitical Analysis]**
+> US internal division and "exit ramp" pressure on Trump reduces immediate risk of major Iran conflict, easing regional security concerns.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cjd8e4px12ro?at_medium=RSS&at_campaign=rss)
+
+
 ## Nepal's ex-PM arrested over fatal protest crackdown
 *Date: 2026-03-28 06:12*
 
