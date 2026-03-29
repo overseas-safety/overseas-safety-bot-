@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Jeremy Bowen: Trump is waging war based on instinct and it isn't working
+*Date: 2026-03-29 10:04*
+
+**[Expert Geopolitical Analysis]**
+> Trump's instinct-driven, failing approach to "war" heightens global instability, fostering unpredictable conflict risks and eroding international security norms.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c5y969pnxgvo?at_medium=RSS&at_campaign=rss)
+
+
 ## Trump is waging war based on instinct and it isn't working
 *Date: 2026-03-29 06:47*
 
