@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Trump is waging war based on instinct and it isn't working
+*Date: 2026-03-29 06:47*
+
+**[Expert Geopolitical Analysis]**
+> Instinct-led foreign policy failures escalate global security risks, fostering unpredictability and potential for wider conflict.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c5y969pnxgvo?at_medium=RSS&at_campaign=rss)
+
+
 ## Iran war splits older and younger conservatives - as pressure builds for Trump to find exit ramp
 *Date: 2026-03-28 10:04*
 
