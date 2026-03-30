@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Why does the US have Iran's Kharg Island in its sights?
+*Date: 2026-03-30 12:05*
+
+**[Expert Geopolitical Analysis]**
+> US focus on Kharg Island signals high risk of Mideast escalation, threatening global oil supplies and wider regional security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c8jxzlwvd8ro?at_medium=RSS&at_campaign=rss)
+
+
 ## Photos show heavily damaged US radar jet at Saudi base
 *Date: 2026-03-30 08:11*
 
