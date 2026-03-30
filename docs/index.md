@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Photos show heavily damaged US radar jet at Saudi base
+*Date: 2026-03-30 08:11*
+
+**[Expert Geopolitical Analysis]**
+> Damage to US radar jet at Saudi base signals serious threats to American assets, heightening regional instability and global security concerns.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cwyd07m7e1xo?at_medium=RSS&at_campaign=rss)
+
+
 ## Jeremy Bowen: Trump is waging war based on instinct and it isn't working
 *Date: 2026-03-29 10:04*
 
