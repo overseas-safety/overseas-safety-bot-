@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Spain closes airspace to US aircraft involved in Iran war
+*Date: 2026-03-31 06:57*
+
+**[Expert Geopolitical Analysis]**
+> Spain closing airspace to US Iran-war aircraft fractures NATO unity, hinders US military response, and sets a precedent for allied non-cooperation, raising global security risks.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cwy368j1e3lo?at_medium=RSS&at_campaign=rss)
+
+
 ## Why does the US have Iran's Kharg Island in its sights?
 *Date: 2026-03-30 12:05*
 
