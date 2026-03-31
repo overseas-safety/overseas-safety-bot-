@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## China bans storing cremated remains in empty 'bone ash apartments'
+*Date: 2026-03-31 11:37*
+
+**[Expert Geopolitical Analysis]**
+> China's ban on 'bone ash apartments' aims to prevent resource misuse and social tensions. Such domestic stability efforts by a global power are geopolitically significant.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cm25ynex2zxo?at_medium=RSS&at_campaign=rss)
+
+
 ## Spain closes airspace to US aircraft involved in Iran war
 *Date: 2026-03-31 06:57*
 
