@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## China is trying to play peacemaker in the Iran war - will it work?
+*Date: 2026-04-01 08:04*
+
+**[Expert Geopolitical Analysis]**
+> China's peacemaking bid in Iran signals a major shift in global power dynamics. Success could stabilize a volatile region, failure risks wider conflict.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cze0kz7gr84o?at_medium=RSS&at_campaign=rss)
+
+
 ## China bans storing cremated remains in empty 'bone ash apartments'
 *Date: 2026-03-31 11:37*
 
