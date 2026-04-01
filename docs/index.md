@@ -19,6 +19,15 @@ This platform automatically aggregates breaking news concerning global security,
 
 
 ## China is trying to play peacemaker in the Iran war - will it work?
+*Date: 2026-04-01 11:41*
+
+**[Expert Geopolitical Analysis]**
+> China's Iran mediation aims to de-escalate Mideast tensions. Success would stabilize vital energy & shipping; failure risks wider conflict.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cze0kz7gr84o?at_medium=RSS&at_campaign=rss)
+
+
+## China is trying to play peacemaker in the Iran war - will it work?
 *Date: 2026-04-01 08:04*
 
 **[Expert Geopolitical Analysis]**
