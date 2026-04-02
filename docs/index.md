@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Watch the moment Artemis II blasts into space
+*Date: 2026-04-02 06:56*
+
+**[Expert Geopolitical Analysis]**
+> Artemis II launch intensifies strategic space competition for lunar resources and technological dominance, raising future global security concerns.
+
+[Read Primary Source](https://www.bbc.com/news/videos/cwydnrmggnno?at_medium=RSS&at_campaign=rss)
+
+
 ## China is trying to play peacemaker in the Iran war - will it work?
 *Date: 2026-04-01 11:41*
 
