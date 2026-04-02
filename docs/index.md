@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Trump leaves key questions unanswered as he seeks to calm nerves over Iran war
+*Date: 2026-04-02 11:34*
+
+**[Expert Geopolitical Analysis]**
+> Lack of clarity on Iran strategy fuels regional instability, heightening escalation risks and global security uncertainty.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cnv81ven263o?at_medium=RSS&at_campaign=rss)
+
+
 ## Watch the moment Artemis II blasts into space
 *Date: 2026-04-02 06:56*
 
