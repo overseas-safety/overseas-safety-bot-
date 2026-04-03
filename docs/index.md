@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Artemis II leaves Earth's orbit on track for far side of the Moon
+*Date: 2026-04-03 11:25*
+
+**[Expert Geopolitical Analysis]**
+> Artemis II deep space progress bolsters US prestige and leadership, intensifying competition for lunar resources and strategic positions, impacting long-term global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c937g7nd5x4o?at_medium=RSS&at_campaign=rss)
+
+
 ## Artemis II blasts ever closer to the far side of the Moon
 *Date: 2026-04-03 06:52*
 
