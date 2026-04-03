@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Artemis II blasts ever closer to the far side of the Moon
+*Date: 2026-04-03 06:52*
+
+**[Expert Geopolitical Analysis]**
+> Artemis II advances deep space capability, fueling a new space race for lunar resources and strategic influence, impacting global power dynamics.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c937g7nd5x4o?at_medium=RSS&at_campaign=rss)
+
+
 ## Trump leaves key questions unanswered as he seeks to calm nerves over Iran war
 *Date: 2026-04-02 11:34*
 
