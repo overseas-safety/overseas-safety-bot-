@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Rescue team in Iran face 'harrowing and dangerous' search for US crew member
+*Date: 2026-04-04 06:15*
+
+**[Expert Geopolitical Analysis]**
+> Despite humanitarian efforts for a US national, this incident in Iran underscores persistent risks and the complex, tense US-Iran dynamic for global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/c0le43jw8e9o?at_medium=RSS&at_campaign=rss)
+
+
 ## Artemis II leaves Earth's orbit on track for far side of the Moon
 *Date: 2026-04-03 11:25*
 
