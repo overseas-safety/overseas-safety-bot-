@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## Man charged over fatal shooting of baby in pram in New York
+*Date: 2026-04-05 06:47*
+
+**[Expert Geopolitical Analysis]**
+> This tragic NYC crime, while localized, can incrementally erode international perceptions of urban safety, possibly impacting tourism appeal over time.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cx267dnex7ko?at_medium=RSS&at_campaign=rss)
+
+
 ## Rescue team in Iran face 'harrowing and dangerous' search for US crew member
 *Date: 2026-04-04 10:06*
 
