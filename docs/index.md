@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## What we know so far about rescue of US airman in Iran
+*Date: 2026-04-05 10:20*
+
+**[Expert Geopolitical Analysis]**
+> US airman rescue in Iran suggests high risk of direct US-Iran confrontation, escalating regional tensions and imperiling global security.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cm2k1dgz142o?at_medium=RSS&at_campaign=rss)
+
+
 ## Man charged over fatal shooting of baby in pram in New York
 *Date: 2026-04-05 06:47*
 
