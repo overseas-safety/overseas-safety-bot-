@@ -18,6 +18,15 @@ This platform automatically aggregates breaking news concerning global security,
 ### Latest News & Analysis
 
 
+## How rescue of US airman in remote part of Iran unfolded
+*Date: 2026-04-06 08:13*
+
+**[Expert Geopolitical Analysis]**
+> US airman rescue in Iran suggests US operational presence inside Iranian territory, a major security flashpoint risking regional escalation.
+
+[Read Primary Source](https://www.bbc.com/news/articles/cx2vpz1kwreo?at_medium=RSS&at_campaign=rss)
+
+
 ## What we know so far about rescue of US airman in Iran
 *Date: 2026-04-05 10:20*
 
